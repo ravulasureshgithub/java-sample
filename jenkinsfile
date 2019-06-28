@@ -1,7 +1,7 @@
 pipeline{
     agent any
-    stage {
-        statge ('Initialize') {
+    stages {
+        stage ('Initialize') {
             steps {
                 ssh '''
                 echo "PATH = ${PATH}"
