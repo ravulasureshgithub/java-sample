@@ -12,16 +12,14 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-
-        post {
+        
+    }
+    post {
             success{
                 echo 'Now Archiving......'
 
                 archiveArtifacts artifacts : '**/*.war'
-            }
-
-        }
-        
+            }  
     }
     
 }
