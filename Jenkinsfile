@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        post ('Posting'){
+        post {
             success{
                 echo 'Now Archiving......'
 
