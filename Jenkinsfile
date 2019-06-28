@@ -1,22 +1,27 @@
 pipeline{
+    /*A declarative pipeline*/
+
     agent any
+    
     stages {
-        stage ('Initialize') {
+        
+        stage ('Build Servlet Project') {
+    
             steps {
-                echo "Initializing the Code File"
+                /*for Windows Machine*/    
+                bat 'mvn clean package'
             }
         }
 
-        stage ('Build'){
-            steps {
-                echo 'Hello Suresh'
+        post {
+            success {
+                echo 'Now Archiving......'
+
+                archiveArtifacts artifacts : '**/*.war'
             }
+
         }
-        stage ('Deploy'){
-            steps {
-                echo 'Deployed an Artifacts'
-            }
-        }
+        
     }
     
 }
