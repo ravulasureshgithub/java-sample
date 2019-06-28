@@ -11,15 +11,17 @@ pipeline {
                 /*for Windows Machine*/    
                 bat 'mvn clean package'
             }
-        }
-        
-    }
-    post {
-            success{
+            post {
+                success {
                 echo 'Now Archiving......'
 
                 archiveArtifacts artifacts : '**/*.war'
-            }  
+                        }  
+            }
+
+        }
+        
     }
+    
     
 }
