@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Hello World! code Pipeline V2</h2>
+<h2>Hello World! code Pipeline <V2 class="0"></V2.0></h2>
 
 <h3>Welcome to Jenkins! We are working on Code Pipeline version 2.0</h3>
 
