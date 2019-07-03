@@ -9,7 +9,7 @@ pipeline {
     
             steps {
                 /*for Windows Machine*/    
-                bat 'mvn clean package'
+                sh 'mvn clean package'
             }
             post {
                 success {
