@@ -12,7 +12,7 @@ pipeline {
                 /*bat 'mvn clean package'*/
 
                  /*for Linux/MAC Machine*/    
-                script: './scripts.sh'
+                sh 'mvn clean package'
             }
             post {
                 success {
