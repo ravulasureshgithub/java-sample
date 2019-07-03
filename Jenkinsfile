@@ -7,9 +7,9 @@ pipeline {
         
         stage ('Build Servlet Project') {
 
-        def mvn_version = 'M3'
-        withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] )
-        
+        //def mvn_version = 'M3'
+        //withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] )
+
             steps {
                 /*for Windows Machine*/    
                 /*bat 'mvn clean package'*/
@@ -17,7 +17,7 @@ pipeline {
                  /*for Linux/MAC Machine*/    
                 sh '''
                 
-                mvn clean package
+                mvn -B -DskipTests clean package
                 
                 '''
             }
