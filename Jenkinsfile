@@ -1,5 +1,8 @@
 pipeline {
     /*A declarative pipeline*/
+ tools {
+    maven 'M3'
+  }
 
     agent any
     
@@ -12,7 +15,11 @@ pipeline {
                 /*bat 'mvn clean package'*/
 
                  /*for Linux/MAC Machine*/    
-                sh 'mvn clean package'
+                sh '''
+                
+                mvn clean package
+                
+                '''
             }
             post {
                 success {
