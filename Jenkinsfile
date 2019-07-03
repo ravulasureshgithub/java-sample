@@ -1,15 +1,15 @@
 pipeline {
     /*A declarative pipeline*/
- tools {
-    maven 'M3'
-  }
 
     agent any
     
     stages {
         
         stage ('Build Servlet Project') {
-    
+
+        def mvn_version = 'M3'
+        withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] )
+        
             steps {
                 /*for Windows Machine*/    
                 /*bat 'mvn clean package'*/
