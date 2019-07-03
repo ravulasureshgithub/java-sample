@@ -9,6 +9,9 @@ pipeline {
     
             steps {
                 /*for Windows Machine*/    
+                /*bat 'mvn clean package'*/
+
+                 /*for Linux/MAC Machine*/    
                 sh 'mvn clean package'
             }
             post {
