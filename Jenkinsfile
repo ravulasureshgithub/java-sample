@@ -2,26 +2,18 @@ pipeline {
     /*A declarative pipeline*/
 
     agent any
-    tools {
-    maven 'M3'
-  }
     
     stages {
         
         stage ('Build Servlet Project') {
-
-
 
             steps {
                 /*for Windows Machine*/    
                 /*bat 'mvn clean package'*/
 
                  /*for Linux/MAC Machine*/    
-                sh '''
-                
-                mvn clean package
-                
-                '''
+                sh 'mvn clean package'
+            
             }
             post {
                 success {
